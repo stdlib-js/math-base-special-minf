@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2024-12-01)
+## Unreleased (2024-12-15)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`ff25e13`](https://github.com/stdlib-js/stdlib/commit/ff25e1324e1507cc076078e82badce7fdf7915f6) - **docs:** remove excess whitespace _(by Philipp Burckhardt)_
 -   [`ef703d6`](https://github.com/stdlib-js/stdlib/commit/ef703d629af0fa6f4a34e697a26beea37dc7345c) - **feat:** add `math/base/special/minf` [(#2820)](https://github.com/stdlib-js/stdlib/pull/2820) _(by Gunj Joshi, Athan Reines)_
 
 </details>
@@ -34,10 +35,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Gunj Joshi
+-   Philipp Burckhardt
 
 </section>
 
