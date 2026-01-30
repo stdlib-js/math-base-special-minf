@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import minf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-minf@deno/mod.js';
+import minf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-minf@v0.1.0-deno/mod.js';
 ```
 
 #### minf( x, y )
@@ -99,7 +99,7 @@ v = minf( NaN, 3.14 );
 
 ```javascript
 import minstd from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle@deno/mod.js';
-import minf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-minf@deno/mod.js';
+import minf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-minf@v0.1.0-deno/mod.js';
 
 var x;
 var y;
