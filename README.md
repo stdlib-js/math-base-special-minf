@@ -46,7 +46,7 @@ z = \min(x, y)
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="z = \min(x, y)" data-equation="eq:min_function">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@e35241e609f4ea7a5a1e367022755bde30d3119f/lib/node_modules/@stdlib/math/base/special/minf/docs/img/equation_min_function.svg" alt="Minimum of two values">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@85f48534ef6908bbcd982d48f1c5fbea3fb7aafd/lib/node_modules/@stdlib/math/base/special/minf/docs/img/equation_min_function.svg" alt="Minimum of two values">
     <br>
 </div> -->
 
@@ -58,14 +58,32 @@ z = \min(x, y)
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-minf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import minf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-minf@esm/index.mjs';
+var minf = require( '@stdlib/math-base-special-minf' );
 ```
 
 #### minf( x, y )
@@ -110,14 +128,9 @@ v = minf( NaN, 3.14 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import minstd from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle@esm/index.mjs';
-import minf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-minf@esm/index.mjs';
+```javascript
+var minstd = require( '@stdlib/random-base-minstd-shuffle' );
+var minf = require( '@stdlib/math-base-special-minf' );
 
 var x;
 var y;
@@ -130,10 +143,6 @@ for ( i = 0; i < 100; i++ ) {
     v = minf( x, y );
     console.log( 'minf(%d,%d) = %d', x, y, v );
 }
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -142,7 +151,96 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/minf.h"
+```
+
+#### stdlib_base_minf( x, y )
+
+Returns the minimum single-precision floating-point number.
+
+```c
+float out = stdlib_base_minf( 4.2f, 3.14f );
+// returns 3.14f
+
+out = stdlib_base_minf( 0.0f, -0.0f );
+// returns -0.0f
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] float` input value.
+-   **y**: `[in] float` input value.
+
+```c
+float stdlib_base_minf( const float x, const float y );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/minf.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void ) {
+    float x;
+    float y;
+    float v;
+    int i;
+
+    for ( i = 0; i < 100; i++ ) {
+        x = ( ( (float)rand() / (float)RAND_MAX ) * 200.0f ) - 100.0f;
+        y = ( ( (float)rand() / (float)RAND_MAX ) * 200.0f ) - 100.0f;
+        v = stdlib_base_minf( x, y );
+        printf( "x: %f, y: %f, minf(x, y): %f\n", x, y, v );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -169,7 +267,7 @@ for ( i = 0; i < 100; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
